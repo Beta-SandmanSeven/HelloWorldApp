@@ -9,7 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBAction func touch(_ sender: UIButton) {
+        print("You touch it!")
+        
+        let ac = UIAlertController(title: "alert", message: "you touch it", preferredStyle: .alert)
+        let btn = UIAlertAction(title: "got it", style: .default, handler: nil)
+        
+        ac.addAction(btn)
+        
+        self.present(ac, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
